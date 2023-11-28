@@ -1,0 +1,31 @@
+{
+  "name": "netflix-clon-back",
+  "version": "1.0.0",
+  "description": "Backend for Netflix Clon",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "Mateo",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.1",
+    "semistandard": "^17.0.0",
+    "zod": "^3.22.4"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/semistandard/eslintrc.json"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
