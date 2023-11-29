@@ -51,10 +51,10 @@ export class AuthController {
       }
 
       const userFound = await AuthModel.login({ email: result.email, username: result.username });
-      if (!userFound) return res.status(404).json(['Usuario no encontrado']);
+      if (!userFound) return res.status(404).json(['El usuario o la contraseña ingresada son incorrectos.']);
 
       const isMatched = await bycript.compare(result.password, userFound.password);
-      if (!isMatched) return res.status(400).json(['Contraseña incorrecta']);
+      if (!isMatched) return res.status(400).json(['El usuario o la contraseña ingresada son incorrectos.']);
 
       const token = await createAccessToken({ id: userFound._id });
 
