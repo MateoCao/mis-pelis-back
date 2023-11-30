@@ -22,5 +22,6 @@ export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => c
   },
   credentials: true,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  preflightContinue: false
+  preflightContinue: false,
+  exposedHeaders: ['Set-cookie']
 });

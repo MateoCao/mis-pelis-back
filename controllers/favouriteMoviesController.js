@@ -16,7 +16,6 @@ export class FavouriteMoviesController {
   static async add (req, res) {
     try {
       const result = validateFavouriteMovie(req.body);
-      console.log('USUARIO', req.user);
       const userId = req.user.id;
 
       if (result.error) {
