@@ -3,6 +3,7 @@ import cors from 'cors';
 const ACCEPTED_ORIGINS = [
   'http://localhost:5173',
   'http://localhost:5174',
+  'https://www.mispelis.com.ar',
   'https://mispelis.com.ar',
   'https://dev.mispelis.com.ar'
 ];
