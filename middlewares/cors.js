@@ -3,8 +3,8 @@ import cors from 'cors';
 const ACCEPTED_ORIGINS = [
   'http://localhost:5173',
   'http://localhost:5174',
-  'https://www.mispelis.com.ar',
-  'https://www.dev.mispelis.com.ar'
+  'https://mispelis.com.ar',
+  'https://dev.mispelis.com.ar'
 ];
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
@@ -19,5 +19,7 @@ export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => c
 
     return callback(new Error('Not allowed by CORS'));
   },
-  credentials: true
+  credentials: true,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  preflightContinue: false
 });
