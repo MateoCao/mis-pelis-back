@@ -78,7 +78,11 @@ export class AuthController {
   }
 
   static async logout (req, res) {
-    res.clearCookie('token');
+    res.clearCookie('token', {
+      sameSite: 'none',
+      secure: true,
+      httpOnly: true
+    });
     res.sendStatus(200);
   }
 
